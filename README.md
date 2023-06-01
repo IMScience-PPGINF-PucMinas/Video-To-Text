@@ -152,5 +152,6 @@ If you find this work useful for your research, please cite our papers:
 
 ## Contact
 "Leonardo Vilela Cardoso" with this e-mail: "leonardocardoso@pucminas.br"
+
 "Zenilton Kleber Gonçalves Patrocínio Junior" with this e-mail: "zenilton@pucminas.br"
 
