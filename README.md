@@ -120,10 +120,13 @@ Figure 10 presents a qualitative comparison between the result obtained by the H
   <img src="./results/ijsc/violin_cap_HSAT.jpg" width="500">
 </p>
 
-## Another Works and Implamantation Details
+## Another Works and Implementation Details
 [EMT](https://github.com/IMScience-PPGINF-PucMinas/EMT).
+
 [Adaptive transformer](https://github.com/IMScience-PPGINF-PucMinas/Adaptive-Transformer)
+
 [HSAT Accepted on IJSC 2023](https://github.com/IMScience-PPGINF-PucMinas/HSAT)
+
 [HieTaSumm Submitted](soon)
 
 ## Citations
