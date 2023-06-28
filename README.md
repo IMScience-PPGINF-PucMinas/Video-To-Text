@@ -127,7 +127,7 @@ Figure 10 presents a qualitative comparison between the result obtained by the H
 
 [HSAT Accepted on IJSC 2023](https://github.com/IMScience-PPGINF-PucMinas/HSAT)
 
-[HieTaSumm Submitted](soon)
+[HieTaSumm Accepted on Bracis 2023](soon)
 
 ## Citations
 If you find this work useful for your research, please cite our papers:
