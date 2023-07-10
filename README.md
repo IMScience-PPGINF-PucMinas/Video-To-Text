@@ -127,13 +127,21 @@ Figure 10 presents a qualitative comparison between the result obtained by the H
 
 [HSAT Accepted on IJSC 2023](https://github.com/IMScience-PPGINF-PucMinas/HSAT)
 
-[HieTaSumm Accepted on Bracis 2023](soon)
+[HieTaSumm Accepted on Bracis 2023](https://github.com/IMScience-PPGINF-PucMinas/HieTaSumm)
 
 ## Citations
 If you find this work useful for your research, please cite our papers:
 
 
 ```
+@article{cardoso2023hierarchical,
+  title={Hierarchical time-aware summarization with an adaptive transformer for video captioning},
+  author={Cardoso, Leonardo Vilela and Guimaraes, Silvio Jamil Ferzoli and do Patrocinio Junior, Zenilton Kleber Goncalves},
+  journal={International Journal of Semantic Computing},
+  year={2023},
+  publisher={World Scientific}
+}
+
 @inproceedings{cardoso2022exploring,
   title={Exploring adaptive attention in memory transformer applied to coherent video paragraph captioning},
   author={Cardoso, Leonardo Vilela and Guimaraes, Silvio Jamil F and Patrocinio, Zenilton KG},
