@@ -23,7 +23,7 @@ To deal with coherence and reduce repetition, one possibility is the use of memo
 </p>
 
 More information avalable on: [EMT](https://github.com/IMScience-PPGINF-PucMinas/EMT).
-or on our paper: [EMT paper](https://ieeexplore.ieee.org/document/9643266)
+or on our paper: [EMT Published on ICTAI 2021](https://ieeexplore.ieee.org/document/9643266)
 
 ### Adaptive Transformer
 
@@ -35,7 +35,7 @@ Another perspective is the analysis of the attention inside of the transformer. 
 </p>
 
 More information avalable on: [Adaptive transformer](https://github.com/IMScience-PPGINF-PucMinas/Adaptive-Transformer)
-or on our paper: [Adaptive transformer paper](https://ieeexplore.ieee.org/document/9999093)
+or on our paper: [Adaptive transformer Published on BigMM 2022](https://ieeexplore.ieee.org/document/9999093)
 
 ### Hierarchical Time-Aware Keyframe Selection
 
@@ -55,7 +55,13 @@ A frame similarity graph is constructed and used by the video summarization appr
 
 The use of the threshold $\delta_t$ can be used to restrict the relationship between video frames far away and implies that our hierarchical graph-based summarization approach is time-aware (which also differs from many video summarization works in the literature.
 
-More information avalable on: [HSAT Accepted on IJSC 2023](https://github.com/IMScience-PPGINF-PucMinas/HSAT)
+More information avalable on: [HSAT Published on IJSC 2023](https://www.worldscientific.com/doi/abs/10.1142/S1793351X23640031)
+
+### Hierarchical Time-Aware Keyframe Selection
+
+Video summarization consists of generating a concise video representation that captures all its meaningful information. However, conventional summarization techniques often fall short of capturing all the significant events in a video due to their inability to incorporate the hierarchical structure of the video content. In this regard, hierarchical strategies for video summarization have emerged as a promising solution, in which video content is modeled as a graph to identify keyframes that represent the most relevant information. This approach enables the extraction of the frames that convey the central message of the video, resulting in a more effective and precise summary.
+
+More information avalable on: [HieTaSumm on Bracis 2023](https://link.springer.com/chapter/10.1007/978-3-031-45368-7_18)
 
 ## Results
 
@@ -125,16 +131,25 @@ Figure 10 presents a qualitative comparison between the result obtained by the H
 
 [Adaptive transformer](https://github.com/IMScience-PPGINF-PucMinas/Adaptive-Transformer)
 
-[HSAT Accepted on IJSC 2023](https://github.com/IMScience-PPGINF-PucMinas/HSAT)
+[HSAT](https://github.com/IMScience-PPGINF-PucMinas/HSAT)
 
-[HieTaSumm Accepted on Bracis 2023](https://github.com/IMScience-PPGINF-PucMinas/HieTaSumm)
+[HieTaSumm](https://github.com/IMScience-PPGINF-PucMinas/HieTaSumm)
 
 ## Citations
 If you find this work useful for your research, please cite our papers:
 
 
 ```
-@article{cardoso2023hierarchical,
+@inproceedings{cardoso2023bracis,
+  title={Hierarchical Time-Aware Approach for Video Summarization},
+  author={Cardoso, Leonardo Vilela and Gomes, Gustavo Oliveira Rocha and Guimar{\~a}es, Silvio Jamil Ferzoli and do Patroc{\'\i}nio J{\'u}nior, Zenilton Kleber Gon{\c{c}}alves},
+  booktitle={Brazilian Conference on Intelligent Systems},
+  pages={274--288},
+  year={2023},
+  organization={Springer}
+}
+
+@article{cardoso2023ijsc,
   title={Hierarchical time-aware summarization with an adaptive transformer for video captioning},
   author={Cardoso, Leonardo Vilela and Guimaraes, Silvio Jamil Ferzoli and do Patrocinio Junior, Zenilton Kleber Goncalves},
   journal={International Journal of Semantic Computing},
