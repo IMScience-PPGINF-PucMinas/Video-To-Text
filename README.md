@@ -162,7 +162,22 @@ Figure 10 presents a qualitative comparison between the result obtained by the H
 
 [HieTaSkim](https://github.com/IMScience-PPGINF-PucMinas/HieTaSumm-lib)
 
-[HieTaSumm Library on Pip](https://test.pypi.org/project/HieTaSumm/) Last version on test server will be installed under: pip install -i https://test.pypi.org/simple/ HieTaSumm
+[HieTaSumm Library on Pip](https://test.pypi.org/project/HieTaSumm/)
+Last version on test server will be installed under:
+pip install -i https://test.pypi.org/simple/ HieTaSumm
+
+Usage example: 
+HieTaSumm(
+        video_path='/content/videos',
+        percent=15,
+        rate=2,
+        time=2,
+        alpha=100,
+        selected_model='vgg16',
+        summary_path='/content/skim-5-vgg',
+        gen_summary_method={"method": "group_central_frames"},
+        hierarchy="watershed_hierarchy_by_area"
+    )
 
 [Streamlined](https://github.com/IMScience-PPGINF-PucMinas/StreamExLSTM)
 
