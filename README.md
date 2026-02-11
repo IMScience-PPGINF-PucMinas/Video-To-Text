@@ -176,28 +176,19 @@ pip install -i https://test.pypi.org/simple/ HieTaSumm
 
 Usage example: 
 
+```
 HieTaSumm(
-
         video_path='/content/videos',
-        
         percent=15,
-        
         rate=2,
-        
         time=2,
-        
         alpha=100,
-        
         selected_model='vgg16',
-        
         summary_path='/content/skim-5-vgg',
-        
         gen_summary_method={"method": "group_central_frames"},
-        
         hierarchy="watershed_hierarchy_by_area"
-    
-    )
-
+  )
+```
 
 
 ## Citations
