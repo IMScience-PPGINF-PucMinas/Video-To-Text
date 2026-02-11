@@ -1,10 +1,10 @@
 Exploring attention mechanisms and hierarchical summarization in video captioning
 =====
-This is the Ph.D. Thesis project of Leonardo Vilela Cardoso for evaluating the impact of different attention mechanisms and feature selection with hierarchical keyframes selection.
+This is the Ph.D. Thesis of Leonardo Vilela Cardoso for evaluating the impact of different attention mechanisms and hierarchical feature selection.
 
 ## Abstract
 
-A coherent description is an ultimate goal regarding video captioning via a couple of sentences because it might also affect the consistency and intelligibility of the generated results. In this context, a paragraph describing a video is affected by the activities used to both produce its specific narrative and provide some clues that can also assist in decreasing textual repetition. This work proposes a model, named Hierarchical timeaware Summarization with an Adaptive Transformer – HSAT, that uses a strategy to enhance the frame selection reducing the amount of information that needed to be processed along with attention mechanisms to enhance a memory-augmented transformer. This new approach increases the coherence among the generated sentences, assessing data importance (about the video segments) contained in the self-attention results and uses that to improve readability using only a small fraction of time spent by the other methods. The test results show the potential of this new approach as it provides higher coherence among the various video segments, decreasing the repetition in the generated sentences and improving the description diversity in the ActivityNet Captions dataset.
+The addition of attention mechanisms can improve the quality of descriptions generated in the video captioning task, promoting the creation of more coherent paragraphs. However, in long videos, information relevant to the context may be discarded, resulting in redundant descriptions that compromise the quality of the sentences produced. To mitigate this problem, it is possible to employ complementary techniques that smooth the reduction imposed by the video sampling process. While sequential approaches do not consider the temporal distribution of information, summarization-based methods evaluate the semantic importance of the content, prioritizing the selection of a larger number of significant events. In this context, the use of summarization as a pre-processing step is still little explored in the video captioning task. However, different summarization strategies tend to generate different results. To investigate this aspect, this work applies different summarization techniques in the selection of frames, dynamically or statically, in order to assist the transformer enhanced with adaptive attention mechanisms. Three new approaches are proposed: Adaptive Transformer, \ac{HSAT}, and SkimCap. The Adaptive Transformer model adopts a sequential frame selection policy; HSAT employs a graph hierarchy to select a fixed number of key frames representative of the video; and SkimCap presents variations in its selection policy, being trained with features obtained by dynamic hierarchical clustering and tested with frames chosen by the same strategy or by a supervised model trained on the SumMe dataset. This configuration aims to prove both the quality of the hierarchical segment selection and the generalization capacity of the model. The number of frames used varies according to the strategy adopted, being 10 frames in HSAT and 100 in the other approaches. Among the variants, SkimCap stands out as the most promising model. Unlike traditional approaches, which depend on uniform sampling or predefined temporal segments, SkimCap performs unsupervised hierarchical clustering to identify and extract semantically relevant scenes. These condensed representations offer a compact yet information-rich input, enabling the generation of more accurate and contextualized captions. The memory module enhances the modeling of long-range dependencies, while adaptive attention improves the temporal alignment between visual cues and generated tokens. The model was evaluated in the ActivityNet dataset, achieving scores for CIDEr-D of 25.44, BLEU@4 of 10.77, and Repetition@4 of 5.84, indicating consistent improvements in caption quality and relevance. An ablation study confirms the effectiveness of hierarchical summarization as a feature selection mechanism, highlighting its contribution to overall performance. SkimCap thus establishes a new direction for incorporating structured visual summarization into end-to-end captioning systems.
 
 ## Proposed Models
 The problem of dense video captioning is related to the amount of similar information laid out sequentially with little or no variation. The relationship between the distribution of frames has a direct impact on the sentences generated and implies an increase or not in repetition. But, in many cases, part of the generated sentences can be repeated, diminishing the quality of the final result. That is more evident in an event-based description because, if there are different events (video segments) with high correlation, there is a high possibility that the same (or almost the same) sentence fragment appears more than once in the final result. Currently, some methods try to cope with that. However, this task is not trivial since it consists of evaluating the relationship between a text excerpt and all others being produced so that the described event is not repeated in the final result. Thus, some authors have studied the impact of applying methods based on deep learning in improving recognition of that kind of pattern. The use of learning techniques that make it possible to recurrently evaluate and relate the produced sentences has gained prominence because they generate sentences more consistent with the context by assessing the importance and contribution of each word to the final result.
@@ -67,7 +67,26 @@ More information avalable on: [HieTaSumm on Bracis 2023](https://link.springer.c
 
 Video skimming involves generating a concise representation that captures all its significant information. However, conventional skimming techniques often fail to capture different shots in a video due to their inability to detect scene modifications and incorporate the hierarchical structure of video content.
 
-Accepted on Sibgrapi 2024
+More information avalable on: [HieTaSkim on Sibgrapi 2024](https://ieeexplore.ieee.org/abstract/document/10716326)
+
+### Streamlined extended Long Short-Term Memory for video skimming
+
+Video skimming aims to generate concise yet informative summaries that highlight the most salient aspects of a video. However, conventional methods often struggle with diverse and redundant content due to their limited ability to detect scene transitions and insufficient temporal modeling. To address these challenges, we propose Streamlined Extended Long Short-Term Memory (StreamExLSTM), a supervised architecture derived from a streamlined variant of the extended Long Short-Term Memory (xLSTM) model.
+
+More information avalable on: [Streamlined on PRL 2025](https://link.springer.com/chapter/10.1007/978-3-031-45368-7_18)
+
+### Memory-Augmented Long Short-Term Memory for Dynamic Video Summarization
+
+Capturing relevant content from videos while preserving temporal coherence remains a central challenge in video skimming. The prevalence of redundant information often hinders the extraction of meaningful content, especially when the goal is to retain the central narrative of the video. While scene change detection can aid in segmenting video content, conventional methods often struggle with highly diverse and repetitive scenes due to their limited ability to model temporal dependencies and detect transitions effectively.
+
+More information avalable on: [MALSumm on Sibgrapi 2025](https://ieeexplore.ieee.org/abstract/document/11223357?casa_token=S7wlDds_SP0AAAAA:hqlAwD3Ep9H8v8-7WCAni7gnqMocgydS1ZtdTgdL8lNSnBi_KmePVAAkkdlhLvfZCHwcaoDz)
+
+
+### SkimCap: A Transformer-Based Video Captioning Method with Adaptive Attention and Hierarchical Skimming Features
+
+We present SkimCap, a transformer-based video captioning framework that integrates a memory-augmented architecture with adaptive attention and a novel feature selection strategy grounded in hierarchical video skimming. Unlike traditional approaches that rely on uniformly sampled frames or pre-defined temporal segments, SkimCap performs unsupervised hierarchical clustering to identify and extract semantically salient video shots. These condensed representations provide a compact yet information-rich input to the captioning model, enabling more accurate and contextually grounded sentence generation.
+
+More information avalable on: [SkimCap on Sibgrapi 2025](https://ieeexplore.ieee.org/abstract/document/11223503?casa_token=UdVxNGNjopEAAAAA:gMJVfxEZF-ssqxozN4lksWPNVgKRR4MHvjLoKJDslf6aJFUiGBeSkML35qnbCTjw5WzAzgJF)
 
 ## Results
 
@@ -141,11 +160,60 @@ Figure 10 presents a qualitative comparison between the result obtained by the H
 
 [HieTaSumm](https://github.com/IMScience-PPGINF-PucMinas/HieTaSumm)
 
+[HieTaSkim](https://github.com/IMScience-PPGINF-PucMinas/HieTaSumm-lib)
+
+[HieTaSumm Library on Pip](https://test.pypi.org/project/HieTaSumm/) Last version on test server will be installed under: pip install -i https://test.pypi.org/simple/ HieTaSumm
+
+[Streamlined](https://github.com/IMScience-PPGINF-PucMinas/StreamExLSTM)
+
+[MALSumm](https://github.com/IMScience-PPGINF-PucMinas/MALSumm)
+
+[SkimCap](https://github.com/IMScience-PPGINF-PucMinas/SkimCap)
+
+
+
+
+
 ## Citations
 If you find this work useful for your research, please cite our papers:
 
 
 ```
+@inproceedings{cardoso2025skimcap,
+  title={SkimCap: A Transformer-Based Video Captioning Method with Adaptive Attention and Hierarchical Skimming Features},
+  author={Cardoso, Leonardo V and Azevedo, Bernardo PBV da C and Guimar{\~a}es, Silvio Jamil F and Patroc{\'\i}nio, Zenilton KG},
+  booktitle={2025 38th SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI)},
+  pages={1--6},
+  year={2025},
+  organization={IEEE}
+}
+
+@inproceedings{cardoso2025memory,
+  title={Memory-Augmented Long Short-Term Memory for Dynamic Video Summarization},
+  author={Cardoso, Leonardo Vilela and Soraggi, Barbara HP and Guimar{\~a}es, Silvio Jamil F and Patroc{\'\i}nio, Zenilton KG},
+  booktitle={2025 38th SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI)},
+  pages={1--6},
+  year={2025},
+  organization={IEEE}
+}
+
+@article{cardoso2025streamlined,
+  title={Streamlined extended long short-term memory for video skimming},
+  author={Cardoso, Leonardo Vilela and Soraggi, Barbara Hellen P and Guimar{\~a}es, Silvio Jamil F and Patroc{\'\i}nio Jr, Zenilton KG},
+  journal={Pattern Recognition Letters},
+  year={2025},
+  publisher={Elsevier}
+}
+
+@inproceedings{cardoso2024unsupervised,
+  title={Unsupervised Video Skimming with Adaptive Hierarchical Shot Detection},
+  author={Cardoso, Leonardo Vilela and Werneck, July FM and Guimar{\~a}es, Silvio Jamil F and Patroc{\'\i}nio, Zenilton KG},
+  booktitle={2024 37th SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI)},
+  pages={1--6},
+  year={2024},
+  organization={IEEE}
+}
+
 @inproceedings{cardoso2023bracis,
   title={Hierarchical Time-Aware Approach for Video Summarization},
   author={Cardoso, Leonardo Vilela and Gomes, Gustavo Oliveira Rocha and Guimar{\~a}es, Silvio Jamil Ferzoli and do Patroc{\'\i}nio J{\'u}nior, Zenilton Kleber Gon{\c{c}}alves},
