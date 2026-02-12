@@ -73,7 +73,7 @@ More information avalable on: [HieTaSkim on Sibgrapi 2024](https://ieeexplore.ie
 
 Video skimming aims to generate concise yet informative summaries that highlight the most salient aspects of a video. However, conventional methods often struggle with diverse and redundant content due to their limited ability to detect scene transitions and insufficient temporal modeling. To address these challenges, we propose Streamlined Extended Long Short-Term Memory (StreamExLSTM), a supervised architecture derived from a streamlined variant of the extended Long Short-Term Memory (xLSTM) model.
 
-More information avalable on: [Streamlined on PRL 2025](https://link.springer.com/chapter/10.1007/978-3-031-45368-7_18)
+More information avalable on: [StreamExLSTM on PRL 2025](https://link.springer.com/chapter/10.1007/978-3-031-45368-7_18)
 
 ### Memory-Augmented Long Short-Term Memory for Dynamic Video Summarization
 
@@ -160,9 +160,9 @@ Figure 10 presents a qualitative comparison between the result obtained by the H
 
 [HieTaSumm](https://github.com/IMScience-PPGINF-PucMinas/HieTaSumm)
 
-[HieTaSkim](https://github.com/IMScience-PPGINF-PucMinas/HieTaSumm-lib)
+[HieTaSumm Library](https://github.com/IMScience-PPGINF-PucMinas/HieTaSumm-lib)
 
-[Streamlined](https://github.com/IMScience-PPGINF-PucMinas/StreamExLSTM)
+[StreamExLSTM](https://github.com/IMScience-PPGINF-PucMinas/StreamExLSTM)
 
 [MALSumm](https://github.com/IMScience-PPGINF-PucMinas/MALSumm)
 
