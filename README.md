@@ -152,7 +152,7 @@ Figure 10 presents a qualitative comparison between the result obtained by the H
 </p>
 
 ## Another Works and Implementation Details
-[EMT](https://github.com/IMScience-PPGINF-PucMinas/EMT).
+[EMT](https://github.com/IMScience-PPGINF-PucMinas/EMT)
 
 [Adaptive transformer](https://github.com/IMScience-PPGINF-PucMinas/Adaptive-Transformer)
 
